@@ -7,12 +7,15 @@ const VBARS = 20;
 const Bar = ({ n }) => (
   <div className="bar">
     {Array.from({ length: VBARS }).map((_, idx) => (
-      <div key={idx} className={classnames('tick', {
-        active: n > (idx * 50),
-        low: idx < 5,
-        mid: idx >= 5 && idx < 15,
-        high: idx >= 15
-      })} />
+      <div
+        key={idx}
+        className={classnames("tick", {
+          active: n > idx,
+          low: idx < 5,
+          mid: idx >= 5 && idx < 15,
+          high: idx >= 15
+        })}
+      />
     ))}
   </div>
 );
@@ -43,7 +46,7 @@ class App extends Component {
     return (
       <div className="App">
         {bars.map((n, idx) => (
-          <Bar key={idx} n={n} />
+          <Bar key={idx} n={((n / 1000) * VBARS) | 0} />
         ))}
       </div>
     );

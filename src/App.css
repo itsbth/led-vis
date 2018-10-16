@@ -29,15 +29,15 @@
 
 .low {
   background: blue;
-  box-shadow: blue 0px 0px 20px;
+  box-shadow: blue 5px 5px 40px, blue -5px -5px 40px;
 }
 
 .mid {
   background: green;
-  box-shadow: green 0px 0px 20px;
+  box-shadow: green 5px 5px 40px, green -5px -5px 40px;
 }
 
 .high {
   background: red;
-  box-shadow: red 0px 0px 20px;
+  box-shadow: red 5px 5px 40px, red -5px -5px 40px;
 }
